@@ -166,7 +166,50 @@ header {
 .hero-img {
   width: 380px;
   height: 380px;
-  object-fit: cover;           
+  object-fit: cover;  /*remplit le cadre sans déformer l'image, mais peut en couper une partie.*/        
   border-radius: 50%;        
   border: 4px solid var(--accent);
+}
+
+/* Mobile (screens up to 768px)   Responsive design*/
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /*afficher le bouton sur les petits écrans*/
+  }
+
+.menu {
+    display: none;             /* menu hidden until the button is clicked */
+    position: absolute;
+    top: 72px;   /*positionner le menu*/
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background: var(--card);
+  }
+
+.menu li {
+    padding: 0.6rem 0;
+  }
+
+  .menu.open {
+    display: flex;             /* will be shown when i adds the "open" class in js */
+  }
+
+  .hero {
+    flex-direction: column-reverse;   /* photo above, text below */
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-img {
+    width: 240px;
+    height: 240px;
+  }
 }
