@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Technology icons  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <header>
+    <nav class="navbar container">
+      <a href="#home" class="logo">Y.</a>
+
+      <button id="menu-btn" class="menu-btn">☰</button>
+
+      <ul id="menu" class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Home section -->
+    <section id="home" class="hero container">
+      <div class="hero-text">
+        <p>Hi, I'm</p>
+        <h1>Yasmine</h1>
+        <h2>Web Developer</h2>
+        <p>I'm a web developer passionate about building modern, responsive websites and exploring the world of cybersecurity.</p>
+        <a href="#projects" class="btn btn-primary">View My Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <img src="images/photo.jpg" alt="Photo of Yasmine" class="hero-img">
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>
+        I am TAYEB CHERIF Yasmine, a student at ENSTA. I'm a passionate web developer and cybersecurity enthusiast, focused on building interactive, responsive, and high-performance web applications that solve real-world problems. I'm constantly learning and exploring new technologies to create innovative digital experiences.
+      </p>
+
+      <h3>Education</h3>
+      <ul>
+        <li>ENSTA - 2023 to 2028</li>
+        <li>Internship at DJEZZY</li>
+      </ul>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skill-card"><i class="devicon-html5-plain"></i> HTML5</li>
+        <li class="skill-card"><i class="devicon-css3-plain"></i> CSS3</li>
+        <li class="skill-card"><i class="devicon-javascript-plain"></i> JavaScript</li>
+        <li class="skill-card"><i class="devicon-tailwindcss-original"></i> Tailwind CSS</li>
+        <li class="skill-card"><i class="devicon-react-original"></i> React</li>
+        <li class="skill-card"><i class="devicon-nodejs-plain"></i> Node.js</li>
+        <li class="skill-card"><i class="devicon-express-original"></i> Express</li>
+        <li class="skill-card"><i class="devicon-mongodb-plain"></i> MongoDB</li>
+        <li class="skill-card"><i class="devicon-mysql-plain"></i> MySQL</li>
+        <li class="skill-card"><i class="devicon-python-plain"></i> Python</li>
+        <li class="skill-card"><i class="devicon-git-plain"></i> Git</li>
+      </ul>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="section container">
+      <h2>My Projects</h2>
+      <div id="projects-list" class="projects-list">
+        <!-- Projects will be added with JavaScript -->
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Email: ay.tayebcherif@ensta.edu.dz</p>
+      <p>GitHub: github.com/Yas-Tech-tc</p>
+
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p id="form-message"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 TAYEB CHERIF Yasmine - ENSTA</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
