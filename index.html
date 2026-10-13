@@ -11,6 +11,8 @@
   <!-- Technology icons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -116,34 +118,26 @@
 
     <!-- Contact section -->
     <section id="contact" class="section container">
-     <h2>Contact</h2>
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <p>Have a project, an idea or a question? Send me a message</p>
 
-     <div class="contact-grid">
-      <div class="contact-info">
-        <p>Have a projects, an idea or a question? Send me a message</p>
-        <p>Email: ay.tayebcherif@ensta.edu.dz</p>
-        <p>GitHub: github.com/Yas-Tech-tc</p>
+      <div class="contact-buttons">
+        <a href="https://github.com/Yas-Tech-tc" target="_blank" rel="noopener" class="contact-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="mailto:ay.tayebcherif@ensta.edu.dz" class="contact-btn">
+          <i class="fa-solid fa-envelope"></i> Mail
+        </a>
+        <a href="https://www.linkedin.com/in/TAYEB CHERIF Yasmine" target="_blank" rel="noopener" class="contact-btn">
+          <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://wa.me/213672598532" target="_blank" rel="noopener" class="contact-btn">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
       </div>
-     
-
-      <form id="contact-form"> 
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="your name">
-        <small class="error" id="name-error"></small>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="you@example.com">
-        <small class="error" id="email-error"></small>
-
-        <label for="message">Message</label>
-        <textarea id="message" rows="5"></textarea>
-        <small class="error" id="message-error"></small>
-
-        <button type="submit" class="btn btn-primary">Send</button>
-        <p id="form-message"></p>
-      </form>
-     </div>
-    </section>
+    </div>
+  </section>
 
   </main>
 

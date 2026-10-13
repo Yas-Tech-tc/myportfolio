@@ -72,7 +72,7 @@ const form = document.getElementById("contact-form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
-const formMessage = document.getElementById("form-message");
+const formMessage = document.getElementById("formjs code for the verification of validation of the conatct inputs-message");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault(); /*Empêche le comportement normal associé à cet événement.*/

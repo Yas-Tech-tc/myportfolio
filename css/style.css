@@ -283,44 +283,55 @@ header {
 }
 
 /* ---------- Contact ---------- */
-.contact-grid {
+
+.contact-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  gap: 3rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 640px;
+  margin-top: 1.5rem;
 }
 
-form label {
-  display: block;  /* label on its own line */
-  margin : 1rem 0 0 3rem;
-  font-weight: 600;
-  
-}
-
-form input, form textarea {
-  width: 100%;
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   padding: 0.8rem 1rem;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  border-radius: 999px;
   background: var(--card);
+  border: 1px solid var(--border);
   color: var(--text);
-  font-size: 1rem;
-  font-family: inherit;/* uses Poppins instead of the default font */
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
 }
 
-form input:focus, form textarea:focus {
-  outline: none; /* removes the default outline */
+.contact-btn i {
+  font-size: 1.2rem;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.contact-btn:hover {
+  background: var(--accent);
   border-color: var(--accent);
+  color: var(--dark);
+  transform: translateY(-3px);
 }
 
-form .btn {
-  margin-top: 1rem;
-  cursor: pointer;
+.contact-btn:hover i {
+  color: var(--dark);
 }
 
-#form-message {
-  margin-top: 1 rem;
-  font-weight:600;
-  color: #5EEAD4;
+@media (max-width: 600px) {
+  .contact-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /*-----------footer-----------*/
@@ -333,6 +344,26 @@ footer {
 footer p {
   margin: 0;
   color: var(--muted);
+}
+
+
+/* Mobile (screens up to 1024px) Responsive design*/
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-img {
+    width: 300px;
+    height: 300px;
+  }
+  .about-grid {
+    gap: 2rem;
+  }
+  .about-img {
+    width: 240px;
+    height: 300px;
+  }
 }
 
 /* Mobile (screens up to 768px)   Responsive design*/
@@ -389,9 +420,5 @@ footer p {
   .stats {
     justify-content: space-between;
     gap: 1rem;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr; /* single column on mobile */
-    gap: 1.5rem;
   }
 }
