@@ -126,6 +126,12 @@ header {
   color: var(--accent); /* Change color on hover quand la souris passe en dessous*/
 }
 
+.menu a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+}
+
 .menu-btn {
   display: none;   /* masquer complètement l'élément sur ordinateur */
   background: none;
@@ -232,7 +238,7 @@ header {
   overflow: hidden;              /* image follows the rounded corners */
   display: flex;
   flex-direction: column;
-  
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .project-card:hover {
@@ -295,7 +301,7 @@ header {
   gap: 1rem;
   max-width: 640px;
   margin-top: 1.5rem;
-}
+}    
 
 .contact-btn {
   display: flex;

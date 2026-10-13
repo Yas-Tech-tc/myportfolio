@@ -68,44 +68,32 @@ projects.forEach(function (project) {
   projectsList.appendChild(card);
 });
 
-const form = document.getElementById("contact-form");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-const formMessage = document.getElementById("formjs code for the verification of validation of the conatct inputs-message");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); /*Empêche le comportement normal associé à cet événement.*/
-  let valid = true;
+// ----- Active link in the navbar -----
 
-  // Clear previous error messages
-  document.getElementById("name-error").textContent = "";
-  document.getElementById("email-error").textContent = "";
-  document.getElementById("message-error").textContent = "";
-  formMessage.textContent = "";
+const sections = document.querySelectorAll("section");
+const menuLinks = document.querySelectorAll("#menu a");
+window.addEventListener("scroll", function () {
 
-  // Validate name
-  if (nameInput.value.trim() === "") {
-    document.getElementById("name-error").textContent = "Please enter your name.";
-    valid = false;
+  let current = "home"; // Set "home" as the default active section
+
+  sections.forEach(function (section) {
+    if (window.scrollY >= section.offsetTop - 120) {  // Check if the scroll position has reached this section
+      current = section.id; // Store the ID of the current section (home, about, projects...)
+    }
+  });
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {   // Check if the user has reached the bottom of the page
+    current = "contact";// Make the contact section active
   }
 
-  // Validate email
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(emailInput.value.trim())) {
-    document.getElementById("email-error").textContent = "Please enter a valid email address.";
-    valid = false;
-  }
+  menuLinks.forEach(function (link) {   // Loop through all navbar links
 
-  // Validate message
-  if (messageInput.value.trim().length < 10) {
-    document.getElementById("message-error").textContent = "Your message must be at least 10 characters long.";
-    valid = false;
-  }
+    link.classList.remove("active");  // Remove the "active" class from the current link
+    if (link.getAttribute("href") === "#" + current) {  // Check if the link points to the current section
+      link.classList.add("active");  // Add the "active" class to the matching link
+    }
+  });
 
-  // if all fields are valid, show a success message
-  if (valid) {
-    formMessage.textContent = "Thank you " + nameInput.value.trim() + "! Your message is ready to be sent.";
-    form.reset(); //empties the form 
-  }
 });
+
