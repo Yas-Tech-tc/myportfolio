@@ -67,3 +67,45 @@ projects.forEach(function (project) {
   // Add the card to the page
   projectsList.appendChild(card);
 });
+
+const form = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const formMessage = document.getElementById("form-message");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); /*Empêche le comportement normal associé à cet événement.*/
+  let valid = true;
+
+  // Clear previous error messages
+  document.getElementById("name-error").textContent = "";
+  document.getElementById("email-error").textContent = "";
+  document.getElementById("message-error").textContent = "";
+  formMessage.textContent = "";
+
+  // Validate name
+  if (nameInput.value.trim() === "") {
+    document.getElementById("name-error").textContent = "Please enter your name.";
+    valid = false;
+  }
+
+  // Validate email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value.trim())) {
+    document.getElementById("email-error").textContent = "Please enter a valid email address.";
+    valid = false;
+  }
+
+  // Validate message
+  if (messageInput.value.trim().length < 10) {
+    document.getElementById("message-error").textContent = "Your message must be at least 10 characters long.";
+    valid = false;
+  }
+
+  // if all fields are valid, show a success message
+  if (valid) {
+    formMessage.textContent = "Thank you " + nameInput.value.trim() + "! Your message is ready to be sent.";
+    form.reset(); //empties the form 
+  }
+});
