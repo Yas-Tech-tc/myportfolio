@@ -218,7 +218,69 @@ header {
   margin: 0;
 }
 
+/* ---------- Projects ---------- */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
 
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;              /* image follows the rounded corners */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.project-card:hover {
+  transform: translateY(-6px); /*propriété déplace visuellement la carte.*/
+  border-color: var(--accent);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /*remplir l'espace sans déformer l'image */
+  object-position: top; /* détermine quelle partie de l'image doit être privilégiée lorsque object-fit: cover entraîne une découpe. */
+}
+
+.project-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.tags span {
+  background: var(--bg);
+  color: var(--accent);
+  border-radius: 99px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.project-info .btn {
+  margin-top: auto;              /* pushes the button to the bottom */
+  text-align: center;
+}
 
 /* Mobile (screens up to 768px)   Responsive design*/
 @media (max-width: 768px) {
