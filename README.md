@@ -15,17 +15,6 @@
 
 ---
 
-## Student
-
-| | |
-|---|---|
-| **Name** | TAYEB CHERIF Yasmine |
-| **School** | Higher National School of Advanced Technologies (ENSTA) |
-| **Module** | WAMD, TP 1 |
-| **Semester** | SS, First Semester 2026 |
-
----
-
 ## Project Description
 
 This project is a **responsive personal portfolio website** that lets a visitor quickly discover who I am, my skills, my projects and how to contact me.
@@ -88,8 +77,8 @@ portfolio/
 
 ## My Projects (featured in the portfolio)
 
-| Project | Description | Technologies | Link |
-|---|---|---|---|
+| Project | Description | Technologies |
+|---|---|---|
 | **Jobly** | Full-stack job board where employers post jobs and candidates search, filter and apply | React, Node.js, Express, MongoDB, JWT |
 | **Notes App** | Simple web app to write and save notes | HTML, CSS, JavaScript | 
 | **BUSY Bar Landing Page** | Landing page for a productivity device with an LED "busy" status screen | HTML, Tailwind CSS | 
@@ -100,10 +89,10 @@ portfolio/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Yas-Tech-tc/portfolio.git
+git clone https://github.com/Yas-Tech-tc/myportfolio.git
 
 # 2. Go into the folder
-cd portfolio
+cd myportfolio
 
 # 3. Open index.html in your browser
 #    (or use the "Live Server" extension in VS Code)
@@ -113,7 +102,7 @@ No installation is needed: the project uses only static files.
 
 ---
 
-## 📱 Responsive Breakpoints
+##  Responsive Breakpoints
 
 | Device | Width | Behavior |
 |---|---|---|
@@ -123,28 +112,11 @@ No installation is needed: the project uses only static files.
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
-👉 **[https://yas-tech-tc.github.io/portfolio/](https://yas-tech-tc.github.io/portfolio/)**
+ **[https://yas-tech-tc.github.io/portfolio/](https://yas-tech-tc.github.io/portfolio/)**
 
----
 
-## 📬 Contact
 
-- 📧 Email: [ay.tayebcherif@ensta.edu.dz](mailto:ay.tayebcherif@ensta.edu.dz)
-- 💻 GitHub: [Yas-Tech-tc](https://github.com/Yas-Tech-tc)
 
----
 
-## 🙏 Acknowledgements
-
-- Design guidance and code explanations with the help of an AI assistant (Claude by Anthropic), reviewed, adapted and tested by me.
-- Fonts by [Google Fonts](https://fonts.google.com/) and icons by [Devicon](https://devicon.dev/) and [Font Awesome](https://fontawesome.com/).
-
----
-
-<div align="center">
-
-Made with 💜 by **Yasmine** · ENSTA · 2026
-
-</div>
