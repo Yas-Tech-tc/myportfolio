@@ -224,6 +224,25 @@ header {
   margin: 0;
 }
 
+/* ---------- Skills (final) ---------- */
+#skills h3 {
+  color: var(--accent);
+  margin: 2rem 0 1rem;
+}
+
+.skill-card {
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);       /* the card moves up */
+  border-color: var(--accent);       /* the border lights up */
+}
+
+.skill-card:hover i {
+  color: var(--accent-2);            /* the icon turns pink */
+}
+
 /* ---------- Projects ---------- */
 .projects-list {
   display: grid;
