@@ -282,6 +282,46 @@ header {
   text-align: center;
 }
 
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 3rem;
+}
+
+form label {
+  display: block;  /* label on its own line */
+  margin : 1rem 0 0 3rem;
+  font-weight: 600;
+  
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;/* uses Poppins instead of the default font */
+}
+
+form input:focus, form textarea:focus {
+  outline: none; /* removes the default outline */
+  border-color: var(--accent);
+}
+
+form .btn {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#form-message {
+  margin-top: 1 rem;
+  font-weight:600;
+  color: #5EEAD4;
+}
 /* Mobile (screens up to 768px)   Responsive design*/
 @media (max-width: 768px) {
   .menu-btn {
